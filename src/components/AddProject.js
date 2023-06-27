@@ -4,6 +4,9 @@ import axios from "axios";
 const API_URL = "http://localhost:5005";
 
 function AddProject(props) {
+  // Get the token from the localStorage
+  const storedToken = localStorage.getItem("authToken");
+
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
 
@@ -11,7 +14,7 @@ function AddProject(props) {
     e.preventDefault();
     const requestBody = { title, description };
     axios
-      .post(`${API_URL}/api/projects`, requestBody)
+      .post(`${API_URL}/api/projects`, requestBody, { headers: { Authorization: `Bearer ${storedToken}` } })
       .then((response) => {
         // Reset the state
         setTitle("");
