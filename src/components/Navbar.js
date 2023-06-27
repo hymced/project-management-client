@@ -9,7 +9,7 @@ function Navbar() {
   // the values from AuthContext.Provider `value` prop
   const { isLoggedIn, user, logOutUser } = useContext(AuthContext);
 
-  //  Update the rendering logic to display different content 
+  //  Update the rendering logic to display different content
   //  depending on whether the user is logged in or not
   return (
     <nav>

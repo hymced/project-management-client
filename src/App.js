@@ -10,7 +10,7 @@ import SignupPage from "./pages/SignupPage.js";
 import LoginPage from "./pages/LoginPage.js";
 import IsPrivate from "./components/IsPrivate";
 import IsAnon from "./components/IsAnon";
- 
+
 function App() {
   return (
     <div className="App">
@@ -29,5 +29,5 @@ function App() {
     </div>
   );
 }
- 
+
 export default App;
